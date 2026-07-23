@@ -1,0 +1,3 @@
+python-telegram-bot[job-queue]==22.8
+edgartools==5.43.0
+python-dotenv==1.2.2

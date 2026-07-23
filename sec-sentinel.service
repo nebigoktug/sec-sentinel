@@ -1,0 +1,16 @@
+[Unit]
+Description=SEC Sentinel - EDGAR bildirim botu
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+WorkingDirectory=/path/to/sec-sentinel
+ExecStart=/path/to/sec-sentinel/venv/bin/python /path/to/sec-sentinel/main.py
+Restart=always
+RestartSec=30
+StandardOutput=journal
+StandardError=journal
+
+[Install]
+WantedBy=default.target
